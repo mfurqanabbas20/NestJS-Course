@@ -1,0 +1,13 @@
+dist means distribution it creates when we build or start the project compiled version
+
+Controler = request -> response
+
+eslint.config.mjs for warnings and errors against nestjs
+
+tsconfig.build used for build
+
+tsconfig.json how to compile typescript
+
+Decorators define meta data for classes give special behaviour
+
+nest generate controller user
