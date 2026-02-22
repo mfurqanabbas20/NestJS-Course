@@ -11,3 +11,8 @@ tsconfig.json how to compile typescript
 Decorators define meta data for classes give special behaviour
 
 nest generate controller user
+
+services ko provide krna partha hai 
+@Injectable() Always use on services agr use ni krein gaye toh hamari services kabhi b provide ni ki ja skein gi
+ta k is service ko controller k andar inject krwa skein
+Services are part of dependency injection system
