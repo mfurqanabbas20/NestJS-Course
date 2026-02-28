@@ -9,3 +9,7 @@ export class CategoryController {
         return this.categoryService.getCategories();
     }
 }
+
+// Ensures security and data validation
+
+// define structure of object => interface

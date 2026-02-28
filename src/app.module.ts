@@ -6,9 +6,10 @@ import { ProductService } from './product/product.service';
 import { ProductController } from './product/product.controller';
 import { EmployeeModule } from './employee/employee.module';
 import { CategoryModule } from './category/category.module';
+import { CustomerModule } from './customer/customer.module';
 
 @Module({
-  imports: [EmployeeModule, CategoryModule],
+  imports: [EmployeeModule, CategoryModule, CustomerModule],
   controllers: [AppController, UserController, ProductController],
   providers: [AppService, ProductService],
 })
