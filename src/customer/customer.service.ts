@@ -11,6 +11,7 @@ export class CustomerService {
     }
 
     addCustomer(createCustomerDto: CreateCustomerDto):Customer {
+        console.log("Create customer ", createCustomerDto);
         const newCustomer: Customer = {
             id: Date.now(),
             ...createCustomerDto
@@ -23,3 +24,8 @@ export class CustomerService {
 }
 
 // mainly works on posting data
+
+// Typescript works in compile time not in run time
+
+//  class-validator validates typescript properties
+// class-transformer helps in converting plain json objects into class instances

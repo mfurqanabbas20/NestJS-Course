@@ -13,6 +13,8 @@ export class CustomerController {
 
     @Post()
     addCustomer(@Body() createCustomerDto: CreateCustomerDto){
+        console.log("body")
+        console.log('Create in controller', createCustomerDto);
         return this.customerService.addCustomer(createCustomerDto);
     }
 
