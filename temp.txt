@@ -23,3 +23,8 @@ Services are part of dependency injection system
 pipe => nest generate pipe common/pipes/uppercase
 
 Guards => protect apis authenticate, authorize => CanActivate => implements => execute before controller
+
+To generate filter this is for try catch
+
+
+nest generate filter filters/http-exception
