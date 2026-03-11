@@ -28,3 +28,14 @@ To generate filter this is for try catch
 
 
 nest generate filter filters/http-exception
+
+Middleware runs before controller executes.
+Logging incoming requests.
+auth token
+request transformation
+blocking or redirecting requests
+setting headers
+
+Middleware vs Guard => 
+Guard is nest.js features
+Middleware mei koi decorator wagera use ni kr skte
