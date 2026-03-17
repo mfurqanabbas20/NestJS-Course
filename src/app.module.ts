@@ -17,12 +17,14 @@ import { EnvController } from './env/env.controller';
 import { EnvService } from './env/env.service';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { StudentModule } from './student/student.module';
 
 @Module({
   imports: [EmployeeModule, CategoryModule, CustomerModule, ConfigModule.forRoot({
     isGlobal: true
   }),
   MongooseModule.forRoot(process.env.DATABASE_URL!),
+  StudentModule,
 ],
   controllers: [AppController, UserController, ProductController, MynameController, UserRolesController, ExceptionController, DatabaseController, EnvController],
   providers: [AppService, ProductService, DatabaseService, EnvService],
