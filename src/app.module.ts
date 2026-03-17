@@ -13,11 +13,19 @@ import { ExceptionController } from './exception/exception.controller';
 import { LoggerMiddleware } from './middleware/logger/logger.middleware';
 import { DatabaseService } from './database/database.service';
 import { DatabaseController } from './database/database.controller';
+import { EnvController } from './env/env.controller';
+import { EnvService } from './env/env.service';
+import { ConfigModule } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [EmployeeModule, CategoryModule, CustomerModule],
-  controllers: [AppController, UserController, ProductController, MynameController, UserRolesController, ExceptionController, DatabaseController],
-  providers: [AppService, ProductService, DatabaseService],
+  imports: [EmployeeModule, CategoryModule, CustomerModule, ConfigModule.forRoot({
+    isGlobal: true
+  }),
+  MongooseModule.forRoot(process.env.DATABASE_URL!),
+],
+  controllers: [AppController, UserController, ProductController, MynameController, UserRolesController, ExceptionController, DatabaseController, EnvController],
+  providers: [AppService, ProductService, DatabaseService, EnvService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
