@@ -39,3 +39,8 @@ setting headers
 Middleware vs Guard => 
 Guard is nest.js features
 Middleware mei koi decorator wagera use ni kr skte
+
+embedding and referencing in data relationship mongodb, these are techniques
+
+embedding means same data stored in same collection
+referencing means linking by id
